@@ -1,6 +1,9 @@
 #include <string>
 #include <vector>
 
+#include <nlohmann/json.hpp>
+using json = nlohmann::json;
+
 using namespace std;
 
 class source_ref {
@@ -20,4 +23,7 @@ public:
 
     //format: file_path:line_num:column_num
     string toString();
+
+    //to json
+    void to_json(json& j) const;
 };

@@ -1,11 +1,11 @@
 #include <cstdint>
 /**
- * @brief Represents the set of all reserved keywords in the C programming language.
- * This enum is intended to be used by the Tokenizer to identify specific 
- * keyword tokens during the lexical analysis phase.
+ * @brief Represents C keywords grouped by category.
+ *
+ * Each enum class captures a keyword subset so tokenization can maintain
+ * category-specific maps and metadata without splitting the tokenizer class.
  */
-enum class C_keywords : uint32_t {
-    // --- Control Flow ---
+enum class C_keyword_control_flow : uint32_t {
     IF,
     ELSE,
     SWITCH,
@@ -17,9 +17,10 @@ enum class C_keywords : uint32_t {
     BREAK,
     CONTINUE,
     RETURN,
-    GOTO,
+    GOTO
+};
 
-    // --- Basic Types ---
+enum class C_keyword_basic_type : uint32_t {
     INT,
     CHAR,
     FLOAT,
@@ -31,27 +32,32 @@ enum class C_keywords : uint32_t {
     UNSIGNED,
     BOOL,        // C23
     COMPLEX,     // C99
-    IMAGINARY,   // C99
+    IMAGINARY    // C99
+};
 
-    // --- Qualifiers & Storage Classes ---
+enum class C_keyword_qualifier_storage : uint32_t {
     CONST,
     VOLATILE,
     STATIC,
     EXTERN,
     AUTO,
     REGISTER,
-    THREAD_LOCAL, // C11
+    THREAD_LOCAL // C11
+};
 
-    // --- User-Defined Types ---
+enum class C_keyword_user_defined : uint32_t {
     STRUCT,
     UNION,
     ENUM,
-    TYPEDEF,
+    TYPEDEF
+};
 
-    // --- Built-in Operators/Keywords ---
-    SIZEOF,
+enum class C_keyword_builtin : uint32_t {
+    SIZEOF
+};
 
-    // --- C99/C11/C23 Extensions & Special Keywords ---
+// C99 / C11 / C23 extension keywords, plus special built-ins.
+enum class C_keyword_extension : uint32_t {
     ATOMIC,          // C11
     GENERIC,         // C11
     STATIC_ASSERT,   // C11

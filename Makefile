@@ -3,7 +3,7 @@ CXX := g++
 CXXFLAGS := -std=c++17 -Wall -Wextra -I./src/headers
 
 SRC := $(wildcard src/*.cc) $(wildcard src/impl/*.cc)
-OBJ := $(SRC:.cc=.o)
+OBJ := $(patsubst src/%.cc,build/%.o,$(SRC))
 
 .PHONY: all build clean
 
@@ -14,7 +14,8 @@ build: run
 run: $(OBJ)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-%.o: %.cc
+build/%.o: src/%.cc
+	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:

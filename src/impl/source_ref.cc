@@ -28,3 +28,12 @@ int source_ref::get_column_num() {
 string source_ref::toString() {
     return this->file_path + ":" + to_string(this->line_num) + ":" + to_string(this->column_num);
 }
+
+void source_ref::to_json(json& j) const {
+    j = json{
+        {"file_path", file_path},
+        {"line_num", line_num},
+        {"column_num", column_num},
+        {"content", content}
+    };
+}
