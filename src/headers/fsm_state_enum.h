@@ -1,0 +1,36 @@
+#pragma once
+
+#include <cstdint>
+
+enum class state : uint32_t {
+    START,
+    IN_WHITESPACE,
+    IN_IDENTIFIER,
+    IN_KEYWORD,
+
+    // Literals
+    IN_STRING_LITERAL,
+    IN_STRING_ESCAPE_SEQUENCE,
+    IN_CHAR_LITERAL,
+    IN_CHAR_ESCAPE_SEQUENCE,
+    IN_NUMERIC_LITERAL,
+    IN_NUMERIC_LITERAL_HEX,
+    IN_NUMERIC_LITERAL_OCTAL,
+    IN_NUMERIC_LITERAL_BINARY,
+    IN_NUMERIC_LITERAL_FLOAT,
+    IN_NUMERIC_LITERAL_SUFFIX,
+
+    // Operators / punctuation
+    IN_OPERATOR,
+    IN_PUNCTUATOR,
+
+    // Comments
+    IN_SINGLE_LINE_COMMENT,
+    IN_MULTI_LINE_COMMENT,
+
+    // Directives
+    IN_PREPROCESSOR_DIRECTIVE,
+
+    DONE,
+    ERROR
+};

@@ -1,3 +1,4 @@
+#include <string>
 using namespace std;
 
 class expected_token_exception : public std::exception {

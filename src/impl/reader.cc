@@ -1,5 +1,13 @@
 #include "reader.h"
 
+reader* reader::instance;
+
+reader* reader::get_instance(string file_path) {
+    if (reader::instance == nullptr){
+        instance = new reader(file_path);
+    }
+    return reader::instance;
+}
 
 reader::reader(string file_path) {
     this->file_path = file_path;
