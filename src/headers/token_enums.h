@@ -67,6 +67,42 @@ enum class C_keyword_extension : uint32_t {
     TYPEOF_UNQUAL    // C23
 };
 
+/*
+ * C Operators
+       ++ --	            Suffix/postfix increment and decrement	Left-to-right
+      ()	            Function call
+1     []	            Array subscripting
+      .	                Structure and union member access
+      ->	            Structure and union member access through pointer
+      (type){list}	    Compound literal(C99)
+      ++ --	            Prefix increment and decrement[note 1]	Right-to-left
+      + -	            Unary plus and minus
+      ! ~	            Logical NOT and bitwise NOT
+2    (type)	        Cast
+      *	                Indirection (dereference)
+      &	                Address-of
+      sizeof	        Size-of[note 2]
+      _Alignof	        Alignment requirement(C11)
+3     * / %	            Multiplication, division, and remainder	Left-to-right
+4     + -	            Addition and subtraction
+5     << >>	            Bitwise left shift and right shift
+6     < <=	            For relational operators < and ≤ respectively
+      > >=	            For relational operators > and ≥ respectively
+7     == !=	            For relational = and ≠ respectively
+8     &	                Bitwise AND
+9     ^	                Bitwise XOR (exclusive or)
+10    |	                Bitwise OR (inclusive or)
+11    &&	            Logical AND
+12    ||	            Logical OR
+13    ?:	            Ternary conditional[note 3]	Right-to-left
+      =	                Simple assignment
+      += -=	            Assignment by sum and difference
+14    *= /= %=	        Assignment by product, quotient, and remainder
+      <<= >>=	        Assignment by bitwise left shift and right shift
+      &= ^= |=	        Assignment by bitwise AND, XOR, and OR
+15    ,	                Comma	Left-to-right
+ */
+
 //organize this by order of precedence
 enum class C_operator : uint32_t {
     LEFT_PAREN,     // (

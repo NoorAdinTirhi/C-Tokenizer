@@ -1,6 +1,7 @@
 using namespace std;
-
 #include "source_ref.h"
+
+//source_ref implementation
 
 source_ref::source_ref(string content, int line_num, int column_num, string file_path) {
     this->content = content;
@@ -36,4 +37,68 @@ void source_ref::to_json(json& j) const {
         {"column_num", column_num},
         {"content", content}
     };
+}
+
+//source_block implementation
+
+source_block::source_block(vector<source_ref> refs) {
+    this->refs = refs;
+    this->block_size = 0;
+    for (auto& ref : refs) {
+        this->block_size += ref.get_content().size();
+    }
+    this->it = block_iterator(this);
+}
+
+uint source_block::get_lines_size() {
+    return this->refs.size();
+}
+
+source_ref source_block::get_ref(uint index){
+    return this->refs[index];
+}
+
+block_iterator source_block::get_iterator() {
+    return this->it;
+}
+
+//block_iterator implementation
+block_iterator::block_iterator() {
+    this->block = nullptr;
+    this->source_ref_index = 0;
+    this->char_index = 0;
+}
+
+block_iterator::block_iterator(source_block *block) {
+    this->block = block;
+    this->source_ref_index = 0;
+    this->char_index = 0;
+}
+
+
+bool block_iterator::has_next() {
+    //depending on the internal implementation of G++/Clang get_content just to get size could be bad performance
+    if (char_index < block->get_ref(source_ref_index).get_content().size())
+        return true;
+    if (source_ref_index < block->get_lines_size())
+        return true;
+    return false;
+}
+
+char block_iterator::next() {
+    if (!has_next()) {
+        throw runtime_error("No more characters to iterate over");
+    }   
+    string curr_line = block->get_ref(source_ref_index).get_content();
+
+    if (char_index + 1 < curr_line.size())
+        return curr_line[++char_index];
+    
+    curr_line = block->get_ref(++source_ref_index).get_content();
+    char_index = 0;
+    return curr_line[char_index];
+}
+
+source_ref block_iterator::current_ref(){
+    return block->get_ref(source_ref_index);
 }

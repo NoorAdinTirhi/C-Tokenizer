@@ -2,11 +2,10 @@
 
 #include <cstdint>
 
-enum class state : uint32_t {
+enum class parser_state : uint32_t {
     START,
     IN_WHITESPACE,
     IN_IDENTIFIER,
-    IN_KEYWORD,
 
     // Literals
     IN_STRING_LITERAL,
