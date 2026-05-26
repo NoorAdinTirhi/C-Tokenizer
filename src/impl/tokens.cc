@@ -2,15 +2,7 @@
 using json = nlohmann::json;
 
 using namespace std;
-
-unordered_map<string, C_keyword_control_flow> keyword_token::control_flow_keyword_map;
-unordered_map<string, C_keyword_basic_type> keyword_token::basic_type_keyword_map;
-unordered_map<string, C_keyword_qualifier_storage> keyword_token::qualifier_keyword_map;
-unordered_map<string, C_keyword_user_defined> keyword_token::user_defined_keyword_map;
-unordered_map<string, C_keyword_builtin> keyword_token::builtin_keyword_map;
-unordered_map<string, C_keyword_extension> keyword_token::extension_keyword_map;
-unordered_map<string, C_operator> operator_token::operator_map;
-unordered_map<string, string> preprocessor_directive_token::directive_map;
+#include "token_maps.h"
 
 token::token(string value, source_ref ref)
     : value(value), ref(ref)
@@ -32,6 +24,11 @@ literal_token::literal_token(string value, source_ref ref, C_literal_type litera
 {
 }
 
+punctuator_token::punctuator_token(string value, source_ref ref)
+    : token(value, ref)
+{
+}
+
 operator_token::operator_token(string value, source_ref ref)
     : token(value, ref)
 {
@@ -49,6 +46,14 @@ preprocessor_directive_token::preprocessor_directive_token(string value, source_
         throw invalid_argument("Expected preprocessor directive : " + value + " at " + ref.toString());
     }
 }
+bool keyword_token::is_keyword(const string& value) {
+    return control_flow_keyword_map.find(value) != control_flow_keyword_map.end() ||
+           basic_type_keyword_map.find(value) != basic_type_keyword_map.end() ||
+           qualifier_keyword_map.find(value) != qualifier_keyword_map.end() ||
+           user_defined_keyword_map.find(value) != user_defined_keyword_map.end() ||
+           builtin_keyword_map.find(value) != builtin_keyword_map.end() ||
+           extension_keyword_map.find(value) != extension_keyword_map.end();
+};
 
 keyword_type_t keyword_token::lookup_keyword(const string& value, source_ref ref)
 {
@@ -97,6 +102,11 @@ void token::to_json(json &j)
     j["ref"] = ref_json;
 }
 
+void identifier_token::to_json(json &j){
+    token::to_json(j);
+    j["type"] = "identifier token";
+}
+
 void keyword_token::to_json(json &j) {    
     token::to_json(j);
     j["type"] = "keyword_token";
@@ -123,6 +133,11 @@ void literal_token::to_json(json &j) {
     token::to_json(j);
     j["type"] = "literal_token";
     j["literal_type"] = static_cast<int>(literal_type);
+}
+
+void punctuator_token::to_json(json &j) {
+    token::to_json(j);
+    j["type"] = "punctuator_token";
 }
 
 void preprocessor_directive_token::to_json(json &j) {

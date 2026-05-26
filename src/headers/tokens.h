@@ -23,6 +23,7 @@ struct token {
 struct identifier_token : public token {
     
     identifier_token(string value, source_ref ref);
+    void to_json(json& j) override;
 };
 
 using keyword_type_t = variant<
@@ -42,7 +43,7 @@ struct keyword_token : public token {
     static unordered_map<string, C_keyword_extension> extension_keyword_map;
 
     static keyword_type_t lookup_keyword(const string& value, source_ref ref);
-
+    static bool is_keyword(const string& value);
     keyword_type_t keyword_type;
 
     
@@ -66,6 +67,11 @@ struct literal_token : public token {
 
     
     literal_token(string value, source_ref ref, C_literal_type type);
+    void to_json(json& j) override;
+};
+
+struct punctuator_token : public token {
+    punctuator_token(string value, source_ref ref);
     void to_json(json& j) override;
 };
 

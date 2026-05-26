@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <iostream>
 
 #include <nlohmann/json.hpp>
 using json = nlohmann::json;
@@ -47,6 +48,7 @@ struct block_iterator {
     char prev();
     source_ref current_ref();
     int current_index();
+    string to_string() const;
 };
 
 struct source_block {
@@ -58,5 +60,6 @@ struct source_block {
     uint get_lines_size();
     source_ref get_ref(uint index);
     block_iterator get_iterator();
+    block_iterator* get_iterator_ptr();
 };
 

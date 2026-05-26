@@ -53,6 +53,12 @@ void source_ref::set_line_num(int line_num) {
     this->line_num = line_num;
 }
 
+string block_iterator::to_string() const {
+    string result = "Current source ref: " + std::to_string(source_ref_index) + "\n";
+    result += "Current char index: " + std::to_string(char_index) + "\n";
+    return result;
+}
+
 //source_block implementation
 
 source_block::source_block(vector<source_ref> refs) {
@@ -75,31 +81,33 @@ source_ref source_block::get_ref(uint index){
 block_iterator source_block::get_iterator() {
     return this->it;
 }
-
+block_iterator* source_block::get_iterator_ptr() {
+    return &(this->it);
+}
 //block_iterator implementation
 block_iterator::block_iterator() {
     this->block = nullptr;
     this->source_ref_index = 0;
-    this->char_index = 0;
+    this->char_index = -1;
 }
 
 block_iterator::block_iterator(source_block *block) {
     this->block = block;
     this->source_ref_index = 0;
-    this->char_index = 0;
+    this->char_index = -1;
 }
 
 
 bool block_iterator::has_next() {
     //depending on the internal implementation of G++/Clang get_content just to get size could be bad performance
-    if (char_index < block->get_ref(source_ref_index).get_content().size())
+    if (char_index < block->get_ref(source_ref_index).get_content().size() - 1)
         return true;
-    if (source_ref_index < block->get_lines_size())
+    if (source_ref_index < block->get_lines_size() - 1)
         return true;
     return false;
 }
 
-bool block_iterator::has_prev() {\
+bool block_iterator::has_prev() {
     if (char_index > 0)
         return true;
     if (source_ref_index > 0)
@@ -116,7 +124,8 @@ char block_iterator::prev() {
     if (char_index > 0)
         return curr_line[--char_index];
 
-    curr_line = block->get_ref(--source_ref_index).get_content();
+    source_ref_index--;
+    curr_line = block->get_ref(source_ref_index).get_content();
     char_index = curr_line.size() - 1;
     return curr_line[char_index];
 }
@@ -130,7 +139,8 @@ char block_iterator::next() {
     if (char_index + 1 < curr_line.size())
         return curr_line[++char_index];
     
-    curr_line = block->get_ref(++source_ref_index).get_content();
+    source_ref_index++;
+    curr_line = block->get_ref(source_ref_index).get_content();
     char_index = 0;
     return curr_line[char_index];
 }

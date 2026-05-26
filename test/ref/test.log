@@ -1,0 +1,287 @@
+{
+    "ref": {
+        "column_num": 8,
+        "content": "#include <stdio.h>",
+        "file_path": "test/test.c",
+        "line_num": 1
+    },
+    "type": "preprocessor_directive_token",
+    "value": "include"
+}
+------------------------
+{
+    "literal_type": 3,
+    "ref": {
+        "column_num": 17,
+        "content": "#include <stdio.h>",
+        "file_path": "test/test.c",
+        "line_num": 1
+    },
+    "type": "literal_token",
+    "value": "stdio.h"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 8,
+        "content": "#include <stdlib.h>",
+        "file_path": "test/test.c",
+        "line_num": 2
+    },
+    "type": "preprocessor_directive_token",
+    "value": "include"
+}
+------------------------
+{
+    "literal_type": 3,
+    "ref": {
+        "column_num": 18,
+        "content": "#include <stdlib.h>",
+        "file_path": "test/test.c",
+        "line_num": 2
+    },
+    "type": "literal_token",
+    "value": "stdlib.h"
+}
+------------------------
+{
+    "keyword_category": "basic_type",
+    "keyword_type": 0,
+    "ref": {
+        "column_num": 3,
+        "content": "int main() {",
+        "file_path": "test/test.c",
+        "line_num": 4
+    },
+    "type": "keyword_token",
+    "value": "int"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 8,
+        "content": "int main() {",
+        "file_path": "test/test.c",
+        "line_num": 4
+    },
+    "type": "identifier token",
+    "value": "main"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 9,
+        "content": "int main() {",
+        "file_path": "test/test.c",
+        "line_num": 4
+    },
+    "type": "punctuator_token",
+    "value": "("
+}
+------------------------
+{
+    "ref": {
+        "column_num": 10,
+        "content": "int main() {",
+        "file_path": "test/test.c",
+        "line_num": 4
+    },
+    "type": "punctuator_token",
+    "value": ")"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 0,
+        "content": "    int x; ",
+        "file_path": "test/test.c",
+        "line_num": 5
+    },
+    "type": "punctuator_token",
+    "value": "{"
+}
+------------------------
+{
+    "keyword_category": "basic_type",
+    "keyword_type": 0,
+    "ref": {
+        "column_num": 7,
+        "content": "    int x; ",
+        "file_path": "test/test.c",
+        "line_num": 5
+    },
+    "type": "keyword_token",
+    "value": "int"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 9,
+        "content": "    int x; ",
+        "file_path": "test/test.c",
+        "line_num": 5
+    },
+    "type": "identifier token",
+    "value": "x"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 10,
+        "content": "    int x; ",
+        "file_path": "test/test.c",
+        "line_num": 5
+    },
+    "type": "punctuator_token",
+    "value": ";"
+}
+------------------------
+{
+    "keyword_category": "basic_type",
+    "keyword_type": 0,
+    "ref": {
+        "column_num": 7,
+        "content": "    int y;",
+        "file_path": "test/test.c",
+        "line_num": 7
+    },
+    "type": "keyword_token",
+    "value": "int"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 9,
+        "content": "    int y;",
+        "file_path": "test/test.c",
+        "line_num": 7
+    },
+    "type": "identifier token",
+    "value": "y"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 0,
+        "content": "",
+        "file_path": "test/test.c",
+        "line_num": 8
+    },
+    "type": "punctuator_token",
+    "value": ";"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 5,
+        "content": "    x = y + 5;",
+        "file_path": "test/test.c",
+        "line_num": 9
+    },
+    "type": "identifier token",
+    "value": "x"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 7,
+        "content": "    x = y + 5;",
+        "file_path": "test/test.c",
+        "line_num": 9
+    },
+    "type": "operator_token",
+    "value": "="
+}
+------------------------
+{
+    "ref": {
+        "column_num": 9,
+        "content": "    x = y + 5;",
+        "file_path": "test/test.c",
+        "line_num": 9
+    },
+    "type": "identifier token",
+    "value": "y"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 11,
+        "content": "    x = y + 5;",
+        "file_path": "test/test.c",
+        "line_num": 9
+    },
+    "type": "operator_token",
+    "value": "+"
+}
+------------------------
+{
+    "literal_type": 0,
+    "ref": {
+        "column_num": 13,
+        "content": "    x = y + 5;",
+        "file_path": "test/test.c",
+        "line_num": 9
+    },
+    "type": "literal_token",
+    "value": "5"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 0,
+        "content": "",
+        "file_path": "test/test.c",
+        "line_num": 10
+    },
+    "type": "punctuator_token",
+    "value": ";"
+}
+------------------------
+{
+    "keyword_category": "control_flow",
+    "keyword_type": 10,
+    "ref": {
+        "column_num": 10,
+        "content": "    return 0;  ",
+        "file_path": "test/test.c",
+        "line_num": 11
+    },
+    "type": "keyword_token",
+    "value": "return"
+}
+------------------------
+{
+    "literal_type": 0,
+    "ref": {
+        "column_num": 12,
+        "content": "    return 0;  ",
+        "file_path": "test/test.c",
+        "line_num": 11
+    },
+    "type": "literal_token",
+    "value": "0"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 13,
+        "content": "    return 0;  ",
+        "file_path": "test/test.c",
+        "line_num": 11
+    },
+    "type": "punctuator_token",
+    "value": ";"
+}
+------------------------
+{
+    "ref": {
+        "column_num": 0,
+        "content": "}",
+        "file_path": "test/test.c",
+        "line_num": 12
+    },
+    "type": "punctuator_token",
+    "value": "}"
+}
+------------------------
