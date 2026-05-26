@@ -16,15 +16,18 @@ int main () {
 
     source_block block = source_block(r->get_refs());
     fsm f = fsm(&block);
-    vector<token*> tokens = f.parse();
+    vector<token*> token_ptrs = f.parse();
+    vector<json> js;
 
     ofstream outFile("test/ref/test.log");
-    for(auto it : tokens){
+    for(auto it : token_ptrs){
         json j;
         it->to_json(j);
-        outFile << j.dump(4) << endl;
-        outFile << "------------------------" << endl;
+        js.push_back(j);
     }
+    json final_j = js;
+
+    outFile << final_j.dump(4) << endl;
     
     return 0;
 }
