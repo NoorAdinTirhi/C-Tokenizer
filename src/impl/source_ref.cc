@@ -2,6 +2,12 @@ using namespace std;
 #include "source_ref.h"
 
 //source_ref implementation
+source_ref::source_ref(source_ref* other) {
+    this->content = other->content;
+    this->line_num = other->line_num;
+    this->column_num = other->column_num;
+    this->file_path = other->file_path;
+}
 
 source_ref::source_ref(string content, int line_num, int column_num, string file_path) {
     this->content = content;
@@ -37,6 +43,14 @@ void source_ref::to_json(json& j) const {
         {"column_num", column_num},
         {"content", content}
     };
+}
+
+void source_ref::set_column_num(int column_num) {
+    this->column_num = column_num;
+}
+
+void source_ref::set_line_num(int line_num) {
+    this->line_num = line_num;
 }
 
 //source_block implementation
@@ -85,6 +99,28 @@ bool block_iterator::has_next() {
     return false;
 }
 
+bool block_iterator::has_prev() {\
+    if (char_index > 0)
+        return true;
+    if (source_ref_index > 0)
+        return true;
+    return false;
+};
+
+char block_iterator::prev() {
+    if (!has_prev()) {
+        throw runtime_error("No previous characters to iterate over");
+    }
+    string curr_line = block->get_ref(source_ref_index).get_content();
+
+    if (char_index > 0)
+        return curr_line[--char_index];
+
+    curr_line = block->get_ref(--source_ref_index).get_content();
+    char_index = curr_line.size() - 1;
+    return curr_line[char_index];
+}
+
 char block_iterator::next() {
     if (!has_next()) {
         throw runtime_error("No more characters to iterate over");
@@ -100,5 +136,8 @@ char block_iterator::next() {
 }
 
 source_ref block_iterator::current_ref(){
-    return block->get_ref(source_ref_index);
+    source_ref actual_ref = block->get_ref(source_ref_index);
+    source_ref current = source_ref(&actual_ref);
+    current.set_column_num(char_index);
+    return current;
 }

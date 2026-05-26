@@ -10,10 +10,44 @@ unordered_map<string, C_keyword_user_defined> keyword_token::user_defined_keywor
 unordered_map<string, C_keyword_builtin> keyword_token::builtin_keyword_map;
 unordered_map<string, C_keyword_extension> keyword_token::extension_keyword_map;
 unordered_map<string, C_operator> operator_token::operator_map;
+unordered_map<string, string> preprocessor_directive_token::directive_map;
 
 token::token(string value, source_ref ref)
     : value(value), ref(ref)
 {
+}
+
+identifier_token::identifier_token(string value, source_ref ref)
+    : token(value, ref)
+{
+}
+
+keyword_token::keyword_token(string value, source_ref ref)
+    : token(value, ref), keyword_type(lookup_keyword(value, ref))
+{
+}
+
+literal_token::literal_token(string value, source_ref ref, C_literal_type literal_type)
+    : token(value, ref), literal_type(literal_type)
+{
+}
+
+operator_token::operator_token(string value, source_ref ref)
+    : token(value, ref)
+{
+    if (operator_map.find(value) == operator_map.end())
+    {
+        throw invalid_argument("Expected operator : " + value + " at " + ref.toString());
+    }
+}
+
+preprocessor_directive_token::preprocessor_directive_token(string value, source_ref ref)
+    : token(value, ref)
+{
+    if (directive_map.find(value) == directive_map.end())
+    {
+        throw invalid_argument("Expected preprocessor directive : " + value + " at " + ref.toString());
+    }
 }
 
 keyword_type_t keyword_token::lookup_keyword(const string& value, source_ref ref)
@@ -50,26 +84,6 @@ keyword_type_t keyword_token::lookup_keyword(const string& value, source_ref ref
 
     throw invalid_argument("Expected keyword at " + ref.toString() + " got " + value + " instead");
 }
-
-keyword_token::keyword_token(string value, source_ref ref)
-    : token(value, ref), keyword_type(lookup_keyword(value, ref))
-{
-}
-
-operator_token::operator_token(string value, source_ref ref)
-    : token(value, ref)
-{
-    if (operator_map.find(value) == operator_map.end())
-    {
-        throw invalid_argument("Expected operator : " + value + " at " + ref.toString());
-    }
-}
-
-literal_token::literal_token(string value, source_ref ref, C_literal_type literal_type)
-    : token(value, ref), literal_type(literal_type)
-{
-}
-
 
 
 void token::to_json(json &j)
@@ -109,6 +123,11 @@ void literal_token::to_json(json &j) {
     token::to_json(j);
     j["type"] = "literal_token";
     j["literal_type"] = static_cast<int>(literal_type);
+}
+
+void preprocessor_directive_token::to_json(json &j) {
+    token::to_json(j);
+    j["type"] = "preprocessor_directive_token";
 }
 
 void keyword_token::init_keyword_maps()
@@ -219,3 +238,20 @@ void operator_token::init_operator_map()
         {",", C_operator::COMMA},
         {";", C_operator::SEMICOLON}};
 };
+
+void preprocessor_directive_token::init_directive_map()
+{
+    directive_map = {
+        {"include", "include"},
+        {"define", "define"},
+        {"undef", "undef"},
+        {"if", "if"},
+        {"ifdef", "ifdef"},
+        {"ifndef", "ifndef"},
+        {"else", "else"},
+        {"elif", "elif"},
+        {"endif", "endif"},
+        {"error", "error"},
+        {"pragma", "pragma"}
+    };
+}

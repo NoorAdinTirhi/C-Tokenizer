@@ -9,9 +9,10 @@ OBJ := $(patsubst src/%.cc,build/%.o,$(SRC))
 
 all: build
 
-build: run
+build: bin/run
 
-run: $(OBJ)
+bin/run: $(OBJ)
+	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 build/%.o: src/%.cc
@@ -19,4 +20,4 @@ build/%.o: src/%.cc
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f run $(OBJ)
+	rm -f bin/run $(OBJ)

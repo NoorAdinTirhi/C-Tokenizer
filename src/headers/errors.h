@@ -2,10 +2,10 @@
 #include <string>
 using namespace std;
 
-class expected_token_exception : public std::exception {
+struct expected_token_exception : public std::exception {
     string message;
     int error_code;
-public:
+
     expected_token_exception(string message, int error_code);
     
     const char* what() const noexcept override {
