@@ -14,9 +14,9 @@ run make:
 ```bash
 $ make
 ```
-run this command:
+run this command to tokenize a C file:
 ```bash
-$ bin/run
+$ bin/run -i <path to input C file> -o <path to output file>
 ```
 
-this will run the one test case in the test directory test/test.c and output the tokens in JSON format to the test/ref/test.log file.
+there's a single working case in the test directory with a log file in the ref directory that shows the expected output.
