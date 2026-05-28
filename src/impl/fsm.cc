@@ -90,11 +90,15 @@ void fsm::whitespace_state(parse_info* info) {
         transition(parser_state::IN_PUNCTUATOR);
 
     } else  if (info->current_char == '"' || info->current_char == '<') {
+        //change this, if before is preprocessor directive then this is a string literal, otherwise this is an operator
         if (info->current_char == '<'){
-            if (typeid(*info->token_stream.back()) != typeid(preprocessor_directive_token)) {
-                throw invalid_argument("Unexpected character <, only accepted after #include");
+            if (typeid(*info->token_stream.back()) == typeid(preprocessor_directive_token) && info->token_stream.back()->value == "include") {
+                transition(parser_state::IN_STRING_LITERAL);
+                info->string_literal_for_lib = true;
+            }else {
+                info->current_string += info->current_char;
+                transition(parser_state::IN_OPERATOR);
             }
-            info->string_literal_for_lib = true;
         }
         transition(parser_state::IN_STRING_LITERAL);
 
@@ -193,7 +197,6 @@ void fsm::numeric_literal_state(parse_info* info) {
 }
 
 void fsm::operator_state(parse_info* info) {
-    //only for assignment and plus/minus for now
     if (fsm::operator_chars.contains(info->current_char)) {
         info->current_string += info->current_char;
     }else {
