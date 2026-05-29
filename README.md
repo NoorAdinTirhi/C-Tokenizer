@@ -19,4 +19,5 @@ run this command to tokenize a C file:
 $ bin/run -i <path to input C file> -o <path to output file>
 ```
 
-there's a single working case in the test directory with a log file in the ref directory that shows the expected output.
+the test directory contains working cases, you can run specific ones using the command above,
+you can also run ``` test/reg_script.sh ``` from the base dir to run all the tests.
