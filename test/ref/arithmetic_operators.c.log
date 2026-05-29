@@ -1,0 +1,1345 @@
+[
+    {
+        "ref": {
+            "column_num": 8,
+            "content": "#include <stdio.h>",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 1
+        },
+        "type": "preprocessor_directive_token",
+        "value": "include"
+    },
+    {
+        "literal_type": 3,
+        "ref": {
+            "column_num": 17,
+            "content": "#include <stdio.h>",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 1
+        },
+        "type": "literal_token",
+        "value": "stdio.h"
+    },
+    {
+        "ref": {
+            "column_num": 8,
+            "content": "#include <stdlib.h>",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 2
+        },
+        "type": "preprocessor_directive_token",
+        "value": "include"
+    },
+    {
+        "literal_type": 3,
+        "ref": {
+            "column_num": 18,
+            "content": "#include <stdlib.h>",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 2
+        },
+        "type": "literal_token",
+        "value": "stdlib.h"
+    },
+    {
+        "keyword_category": "basic_type",
+        "keyword_type": 0,
+        "ref": {
+            "column_num": 3,
+            "content": "int main() {",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 4
+        },
+        "type": "keyword_token",
+        "value": "int"
+    },
+    {
+        "ref": {
+            "column_num": 8,
+            "content": "int main() {",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 4
+        },
+        "type": "identifier token",
+        "value": "main"
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "int main() {",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 4
+        },
+        "type": "punctuator_token",
+        "value": "("
+    },
+    {
+        "ref": {
+            "column_num": 10,
+            "content": "int main() {",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 4
+        },
+        "type": "punctuator_token",
+        "value": ")"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    int x; ",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 5
+        },
+        "type": "punctuator_token",
+        "value": "{"
+    },
+    {
+        "keyword_category": "basic_type",
+        "keyword_type": 0,
+        "ref": {
+            "column_num": 7,
+            "content": "    int x; ",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 5
+        },
+        "type": "keyword_token",
+        "value": "int"
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    int x; ",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 5
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 10,
+            "content": "    int x; ",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 5
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "keyword_category": "basic_type",
+        "keyword_type": 0,
+        "ref": {
+            "column_num": 7,
+            "content": "    int y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 6
+        },
+        "type": "keyword_token",
+        "value": "int"
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    int y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 6
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    int z;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 7
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "keyword_category": "basic_type",
+        "keyword_type": 0,
+        "ref": {
+            "column_num": 7,
+            "content": "    int z;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 7
+        },
+        "type": "keyword_token",
+        "value": "int"
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    int z;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 7
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 8
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z = x << y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 9
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    z = x << y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 9
+        },
+        "type": "operator_token",
+        "value": "="
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    z = x << y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 9
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 12,
+            "content": "    z = x << y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 9
+        },
+        "type": "operator_token",
+        "value": "<<"
+    },
+    {
+        "ref": {
+            "column_num": 14,
+            "content": "    z = x << y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 9
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z = x >> y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 10
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z = x >> y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 10
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    z = x >> y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 10
+        },
+        "type": "operator_token",
+        "value": "="
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    z = x >> y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 10
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 12,
+            "content": "    z = x >> y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 10
+        },
+        "type": "operator_token",
+        "value": ">>"
+    },
+    {
+        "ref": {
+            "column_num": 14,
+            "content": "    z = x >> y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 10
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z = x + y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 11
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z = x + y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 11
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    z = x + y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 11
+        },
+        "type": "operator_token",
+        "value": "="
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    z = x + y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 11
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 11,
+            "content": "    z = x + y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 11
+        },
+        "type": "operator_token",
+        "value": "+"
+    },
+    {
+        "ref": {
+            "column_num": 13,
+            "content": "    z = x + y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 11
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z = x - y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 12
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z = x - y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 12
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    z = x - y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 12
+        },
+        "type": "operator_token",
+        "value": "="
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    z = x - y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 12
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 11,
+            "content": "    z = x - y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 12
+        },
+        "type": "operator_token",
+        "value": "-"
+    },
+    {
+        "ref": {
+            "column_num": 13,
+            "content": "    z = x - y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 12
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z = x * y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 13
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z = x * y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 13
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    z = x * y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 13
+        },
+        "type": "operator_token",
+        "value": "="
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    z = x * y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 13
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 11,
+            "content": "    z = x * y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 13
+        },
+        "type": "operator_token",
+        "value": "*"
+    },
+    {
+        "ref": {
+            "column_num": 13,
+            "content": "    z = x * y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 13
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z = x / y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 14
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z = x / y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 14
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    z = x / y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 14
+        },
+        "type": "operator_token",
+        "value": "="
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    z = x / y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 14
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 11,
+            "content": "    z = x / y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 14
+        },
+        "type": "operator_token",
+        "value": "/"
+    },
+    {
+        "ref": {
+            "column_num": 13,
+            "content": "    z = x / y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 14
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z = x % y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 15
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z = x % y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 15
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    z = x % y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 15
+        },
+        "type": "operator_token",
+        "value": "="
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    z = x % y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 15
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 11,
+            "content": "    z = x % y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 15
+        },
+        "type": "operator_token",
+        "value": "%"
+    },
+    {
+        "ref": {
+            "column_num": 13,
+            "content": "    z = x % y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 15
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    ",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 16
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    x++;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 17
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    x++;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 17
+        },
+        "type": "operator_token",
+        "value": "++"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    ++y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 18
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 6,
+            "content": "    ++y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 18
+        },
+        "type": "operator_token",
+        "value": "++"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    ++y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 18
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    x--;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 19
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    x--;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 19
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    x--;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 19
+        },
+        "type": "operator_token",
+        "value": "--"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    --y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 20
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 6,
+            "content": "    --y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 20
+        },
+        "type": "operator_token",
+        "value": "--"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    --y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 20
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 21
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z = x & y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 22
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    z = x & y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 22
+        },
+        "type": "operator_token",
+        "value": "="
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    z = x & y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 22
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 11,
+            "content": "    z = x & y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 22
+        },
+        "type": "operator_token",
+        "value": "&"
+    },
+    {
+        "ref": {
+            "column_num": 13,
+            "content": "    z = x & y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 22
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z = x | y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 23
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z = x | y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 23
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    z = x | y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 23
+        },
+        "type": "operator_token",
+        "value": "="
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    z = x | y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 23
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 11,
+            "content": "    z = x | y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 23
+        },
+        "type": "operator_token",
+        "value": "|"
+    },
+    {
+        "ref": {
+            "column_num": 13,
+            "content": "    z = x | y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 23
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z = ~z;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 24
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z = ~z;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 24
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 7,
+            "content": "    z = ~z;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 24
+        },
+        "type": "operator_token",
+        "value": "="
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    z = ~z;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 24
+        },
+        "type": "operator_token",
+        "value": "~"
+    },
+    {
+        "ref": {
+            "column_num": 10,
+            "content": "    z = ~z;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 24
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 25
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z += x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 26
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 8,
+            "content": "    z += x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 26
+        },
+        "type": "operator_token",
+        "value": "+="
+    },
+    {
+        "ref": {
+            "column_num": 10,
+            "content": "    z += x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 26
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z -= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 27
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z -= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 27
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 8,
+            "content": "    z -= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 27
+        },
+        "type": "operator_token",
+        "value": "-="
+    },
+    {
+        "ref": {
+            "column_num": 10,
+            "content": "    z -= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 27
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z *= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 28
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z *= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 28
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 8,
+            "content": "    z *= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 28
+        },
+        "type": "operator_token",
+        "value": "*="
+    },
+    {
+        "ref": {
+            "column_num": 10,
+            "content": "    z *= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 28
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z /= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 29
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z /= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 29
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 8,
+            "content": "    z /= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 29
+        },
+        "type": "operator_token",
+        "value": "/="
+    },
+    {
+        "ref": {
+            "column_num": 10,
+            "content": "    z /= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 29
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z %= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 30
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z %= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 30
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 8,
+            "content": "    z %= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 30
+        },
+        "type": "operator_token",
+        "value": "%="
+    },
+    {
+        "ref": {
+            "column_num": 10,
+            "content": "    z %= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 30
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z &= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 31
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z &= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 31
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 8,
+            "content": "    z &= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 31
+        },
+        "type": "operator_token",
+        "value": "&="
+    },
+    {
+        "ref": {
+            "column_num": 10,
+            "content": "    z &= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 31
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z |= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 32
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z |= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 32
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 8,
+            "content": "    z |= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 32
+        },
+        "type": "operator_token",
+        "value": "|="
+    },
+    {
+        "ref": {
+            "column_num": 10,
+            "content": "    z |= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 32
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z ^= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 33
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z ^= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 33
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 8,
+            "content": "    z ^= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 33
+        },
+        "type": "operator_token",
+        "value": "^="
+    },
+    {
+        "ref": {
+            "column_num": 10,
+            "content": "    z ^= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 33
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z <<= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 34
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z <<= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 34
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    z <<= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 34
+        },
+        "type": "operator_token",
+        "value": "<<="
+    },
+    {
+        "ref": {
+            "column_num": 11,
+            "content": "    z <<= x;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 34
+        },
+        "type": "identifier token",
+        "value": "x"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "    z >>= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 35
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 5,
+            "content": "    z >>= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 35
+        },
+        "type": "identifier token",
+        "value": "z"
+    },
+    {
+        "ref": {
+            "column_num": 9,
+            "content": "    z >>= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 35
+        },
+        "type": "operator_token",
+        "value": ">>="
+    },
+    {
+        "ref": {
+            "column_num": 11,
+            "content": "    z >>= y;",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 35
+        },
+        "type": "identifier token",
+        "value": "y"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 36
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "keyword_category": "control_flow",
+        "keyword_type": 10,
+        "ref": {
+            "column_num": 10,
+            "content": "    return 0;  ",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 38
+        },
+        "type": "keyword_token",
+        "value": "return"
+    },
+    {
+        "literal_type": 0,
+        "ref": {
+            "column_num": 12,
+            "content": "    return 0;  ",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 38
+        },
+        "type": "literal_token",
+        "value": "0"
+    },
+    {
+        "ref": {
+            "column_num": 13,
+            "content": "    return 0;  ",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 38
+        },
+        "type": "punctuator_token",
+        "value": ";"
+    },
+    {
+        "ref": {
+            "column_num": 0,
+            "content": "}",
+            "file_path": "test/arithmetic_operators.c",
+            "line_num": 39
+        },
+        "type": "punctuator_token",
+        "value": "}"
+    }
+]

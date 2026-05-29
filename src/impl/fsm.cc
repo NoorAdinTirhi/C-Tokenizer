@@ -99,8 +99,9 @@ void fsm::whitespace_state(parse_info* info) {
                 info->current_string += info->current_char;
                 transition(parser_state::IN_OPERATOR);
             }
+        }else {
+            transition(parser_state::IN_STRING_LITERAL);
         }
-        transition(parser_state::IN_STRING_LITERAL);
 
     } else if (info->current_char == '\'') {
         transition(parser_state::IN_CHAR_LITERAL);
